@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  max-width: 600px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+#about {
+  height: 100%;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.heading {
+  margin-bottom: 30px;
+}
+
+.info {
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 50px 20px;
+  background: #ccc;
+}
