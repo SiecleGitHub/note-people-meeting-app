@@ -1,3 +1,4 @@
+import { GeolocationService } from './../services/geolocation.service';
 import { Meeting } from './../model/meeting';
 import { Component, OnInit } from '@angular/core';
 import { global } from '@angular/compiler/src/util';
@@ -10,9 +11,15 @@ import { global } from '@angular/compiler/src/util';
 export class MeetingComponent implements OnInit {
   globalMeeting = new Meeting();
 
-  constructor() {}
+  constructor(private geolocationService: GeolocationService) {}
 
   ngOnInit(): void {}
+
+  getMeetingLocation(): void {
+    this.geolocationService.getCurrentPosition().subscribe((position) => {
+      console.log(position);
+    });
+  }
 
   save(
     firstName: string,
@@ -27,5 +34,6 @@ export class MeetingComponent implements OnInit {
     meeting.location = location;
     this.globalMeeting = meeting;
     meeting.print();
+    this.getMeetingLocation();
   }
 }
