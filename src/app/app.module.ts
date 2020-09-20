@@ -13,13 +13,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MeetingsComponent } from './meetings/meetings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeetingComponent,
     AboutComponent,
-    NavComponent
+    NavComponent,
+    MeetingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,9 +32,9 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [MeetingsComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

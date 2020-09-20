@@ -1,7 +1,7 @@
+import { MeetingsComponent } from './../meetings/meetings.component';
 import { GeolocationService } from './../services/geolocation.service';
 import { Meeting } from './../model/meeting';
 import { Component, OnInit } from '@angular/core';
-import { global } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-meeting',
@@ -9,9 +9,10 @@ import { global } from '@angular/compiler/src/util';
   styleUrls: ['./meeting.component.css'],
 })
 export class MeetingComponent implements OnInit {
-  globalMeeting = new Meeting();
-
-  constructor(private geolocationService: GeolocationService) {}
+  constructor(
+    private meetingsComponent: MeetingsComponent,
+    private geolocationService: GeolocationService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -32,8 +33,7 @@ export class MeetingComponent implements OnInit {
     meeting.lastName = lastName;
     meeting.date = date;
     meeting.location = location;
-    this.globalMeeting = meeting;
-    meeting.print();
-    this.getMeetingLocation();
+    this.meetingsComponent.meetings.push(meeting);
+    this.meetingsComponent.print();
   }
 }
