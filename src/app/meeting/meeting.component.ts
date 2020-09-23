@@ -10,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeetingComponent implements OnInit {
   constructor(
+    // eslint-disable-next-line no-unused-vars
     private meetingsComponent: MeetingsComponent,
+    // eslint-disable-next-line no-unused-vars
     private geolocationService: GeolocationService
   ) {}
 

@@ -25,8 +25,10 @@ exports.config = {
   },
   onPrepare() {
     require('ts-node').register({
+      // eslint-disable-next-line no-undef
       project: require('path').join(__dirname, './tsconfig.json')
     });
+    // eslint-disable-next-line no-undef
     jasmine.getEnv().addReporter(new SpecReporter({
       spec: {
         displayStacktrace: StacktraceOption.PRETTY

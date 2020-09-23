@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
 
+## Clean code
+
+Eslint has been installed and configured using a local eslint version
+
+Install: `npm install eslint`
+Configure: `./node_modules/.bin/eslint --init`
+Add more rules in .eslintrc.json e.g.: `"no-empty-function": "off",`
+Add script in package.json: `"eslint": "eslint ./",`
+Run eslint: `npm run eslint`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
