@@ -34,7 +34,7 @@ import { MeetingsComponent } from './meetings/meetings.component';
     MatIconModule,
     MatListModule,
   ],
-  providers: [MeetingsComponent],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

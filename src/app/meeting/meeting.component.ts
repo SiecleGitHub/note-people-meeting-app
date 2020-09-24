@@ -1,3 +1,4 @@
+import { MeetingsService } from './../services/meetings.service';
 import { MeetingsComponent } from './../meetings/meetings.component';
 import { GeolocationService } from './../services/geolocation.service';
 import { Meeting } from './../model/meeting';
@@ -9,12 +10,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meeting.component.css'],
 })
 export class MeetingComponent implements OnInit {
-  constructor(
-    // eslint-disable-next-line no-unused-vars
-    private meetingsComponent: MeetingsComponent,
-    // eslint-disable-next-line no-unused-vars
-    private geolocationService: GeolocationService
-  ) {}
+
+  constructor(private meetingsService: MeetingsService,
+              private geolocationService: GeolocationService) {
+  }
 
   ngOnInit(): void {}
 
@@ -35,7 +34,8 @@ export class MeetingComponent implements OnInit {
     meeting.lastName = lastName;
     meeting.date = date;
     meeting.location = location;
-    this.meetingsComponent.meetings.push(meeting);
-    this.meetingsComponent.print();
+    this.meetingsService.meetings.push(meeting);
+    this.meetingsService.print();
+    this.meetingsService.setHelloString();
   }
 }

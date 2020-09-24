@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meeting } from '../model/meeting';
+import { MeetingsService } from '../services/meetings.service';
 
 @Component({
   selector: 'app-meetings',
@@ -8,26 +9,12 @@ import { Meeting } from '../model/meeting';
 })
 export class MeetingsComponent implements OnInit {
   meetings: Meeting[] = [];
+  myHelloString: string;
 
-  constructor() {}
+  constructor(private meetingsService: MeetingsService) {
+    this.meetings = this.meetingsService.meetings;
+    this.myHelloString = this.meetingsService.myHelloString;
+  }
 
   ngOnInit(): void {}
-
-  print(): void {
-    this.meetings.forEach((meeting) => {
-      console.log(
-        'FirstName= ' +
-          meeting.firstName +
-          ', ' +
-          'LastName= ' +
-          meeting.lastName +
-          ', ' +
-          'Date= ' +
-          meeting.date +
-          ', ' +
-          'Location= ' +
-          meeting.location
-      );
-    });
-  }
 }

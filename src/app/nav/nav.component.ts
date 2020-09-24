@@ -16,6 +16,7 @@ export class NavComponent {
       shareReplay()
     );
 
+  // eslint-disable-next-line no-unused-vars
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }
