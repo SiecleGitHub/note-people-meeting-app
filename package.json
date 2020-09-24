@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "eslint": "eslint ./",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "private": true,
   "dependencies": {

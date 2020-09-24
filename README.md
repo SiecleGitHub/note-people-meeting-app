@@ -12,7 +12,10 @@ Run eslint: `npm run eslint`
 ## Testing with Cypress
 Install: `npm install -D cypress`\
 Open Desktop App: `npx cypress open`\
-Run tests by clicking on: `>Run all specs`
+Run tests by clicking on: `>Run all specs`\
+Or run following after configuring package.json with: "cy:open": "cypress open", "cy:run": "cypress run"\
+`npm run cy:open`\
+`npm run cy:run`
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
