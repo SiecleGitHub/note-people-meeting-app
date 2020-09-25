@@ -6,19 +6,16 @@ import { Meeting } from '../model/meeting';
 })
 export class MeetingsService {
   meetings: Meeting[] = [];
-  myHelloString: string;
+  title: string;
 
   constructor() {
   }
 
-  setHelloString(): void {
-    console.log('Entered MeetingsService.setHelloString()');
-    this.myHelloString = 'Hello';
-    console.log('this.myHelloString= ' + this.myHelloString);
+  setTitle(): void {
+    this.title = 'List of Meetings';
   }
 
   print(): void {
-    console.log('Entered MeetingsService.print()');
     this.meetings.forEach((meeting) => {
       console.log(
         'MeetingsService.print::FirstName= ' +

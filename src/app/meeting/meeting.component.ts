@@ -1,5 +1,4 @@
 import { MeetingsService } from './../services/meetings.service';
-import { MeetingsComponent } from './../meetings/meetings.component';
 import { GeolocationService } from './../services/geolocation.service';
 import { Meeting } from './../model/meeting';
 import { Component, OnInit } from '@angular/core';
@@ -36,6 +35,6 @@ export class MeetingComponent implements OnInit {
     meeting.location = location;
     this.meetingsService.meetings.push(meeting);
     this.meetingsService.print();
-    this.meetingsService.setHelloString();
+    this.meetingsService.setTitle();
   }
 }

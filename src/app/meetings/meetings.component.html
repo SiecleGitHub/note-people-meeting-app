@@ -1,7 +1,5 @@
-  <p>{{ myHelloString }} Meetings</p>
-  Meetings.length= {{ meetings.length }}
-  <ul>
-    <li *ngFor="let meeting of meetings">
-      {{ meeting.firstName }}
-    </li>
-  </ul>
+  <app-meetings-table
+   [dataSource]="meetingsData"
+   [title]="meetingsTitle">
+  </app-meetings-table>
+

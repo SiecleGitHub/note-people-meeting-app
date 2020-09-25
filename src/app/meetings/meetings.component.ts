@@ -8,12 +8,12 @@ import { MeetingsService } from '../services/meetings.service';
   styleUrls: ['./meetings.component.css'],
 })
 export class MeetingsComponent implements OnInit {
-  meetings: Meeting[] = [];
-  myHelloString: string;
+  meetingsData: Meeting[];
+  meetingsTitle: string;
 
   constructor(private meetingsService: MeetingsService) {
-    this.meetings = this.meetingsService.meetings;
-    this.myHelloString = this.meetingsService.myHelloString;
+    this.meetingsData = this.meetingsService.meetings;
+    this.meetingsTitle = this.meetingsService.title;
   }
 
   ngOnInit(): void {}

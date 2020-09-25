@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+<table>
+  <div *ngFor="let row of dataSource">
+    <tr>
+      <td>{{ row.firstName }}</td>
+      <td>{{ row.lastName }}</td>
+      <td>{{ row.date }}</td>
+      <td>{{ row.location }}</td>
+    </tr>
+  </div>
+</table>

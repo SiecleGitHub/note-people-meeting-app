@@ -14,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MeetingsComponent } from './meetings/meetings.component';
+import { MeetingsTableComponent } from './meetings-table/meetings-table.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MeetingsComponent } from './meetings/meetings.component';
     AboutComponent,
     NavComponent,
     MeetingsComponent,
+    MeetingsTableComponent,
   ],
   imports: [
     BrowserModule,

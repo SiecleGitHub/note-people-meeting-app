@@ -1,0 +1,10 @@
+table {
+  border: 1px solid #333;
+}
+
+td {
+  border: 1px solid #333;
+  width: 20px;
+  padding: 10px;
+  text-align: right;
+}
